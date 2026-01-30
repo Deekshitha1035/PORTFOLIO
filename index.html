@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deekshitha Sri Jilika | Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #eaeaea;
+    }
+    section { padding: 80px 0; }
+    .section-title {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    /* Navbar */
+    .navbar { background: #0f0f0f; }
+    .nav-link { color: #fff !important; margin-right: 15px; }
+    .nav-link:hover { color: #ffa500 !important; }
+
+    /* Home */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffa500;
+    }
+
+    /* Buttons */
+    .btn-main {
+      background: #ffa500;
+      color: #000;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-weight: 500;
+    }
+
+    /* Cards */
+    .card {
+      background: #151515;
+      border: none;
+      border-radius: 15px;
+      height: 100%;
+    }
+
+    /* Skills */
+    .skill-box {
+      background: #1b1b1b;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .skill-box i {
+      font-size: 40px;
+      color: #ffa500;
+      margin-bottom: 10px;
+    }
+/* ===== PROJECTS ===== */
+            /* ===== PROJECTS ===== */
+    .project-card {
+        background: linear-gradient(145deg, #151515, #1d1d1d);
+        padding: 30px;
+  
+        border-radius: 18px;
+  
+        height: 100%;
+  
+        cursor: pointer;
+  
+        transition: all 0.4s ease;
+  
+        border: 1px solid #2a2a2a;
+  
+        position: relative;
+  
+        overflow: hidden;
+
+    }
+
+
+    .project-card::before {
+
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background: radial-gradient(circle at top, rgba(255,165,0,0.15), transparent 70%);
+
+        opacity: 0;
+
+        transition: 0.4s;
+
+    }
+
+
+    .project-card:hover::before {
+
+        opacity: 1;
+
+    }
+
+    
+
+    .project-card:hover {
+
+        transform: translateY(-10px) scale(1.02);
+
+        border-color: #ffa500;
+
+        box-shadow: 0 15px 40px rgba(255,165,0,0.25);
+
+    }
+
+
+    .project-card h5 {
+
+        color: #ffa500;
+
+        margin-bottom: 12px;
+
+    }
+
+
+
+    .project-card p {
+
+        color: #cccccc;
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .tech-stack {
+
+        margin-top: 15px;
+
+    }
+
+
+    .tech-stack span {
+
+        display: inline-block;
+
+        padding: 6px 12px;
+
+        margin: 5px 5px 0 0;
+
+        border-radius: 20px;
+
+        font-size: 0.75rem;
+
+        border: 1px solid #ffa500;
+
+        color: #ffa500;
+
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 3px solid #ffa500;
+      padding-left: 25px;
+    }
+    .timeline-item { margin-bottom: 30px; }
+
+    .contact-form {
+  
+        max-width: 500px;
+
+    }
+
+
+    .contact-form input,
+
+    .contact-form textarea {
+
+        width: 100%;
+
+        padding: 14px;
+
+        margin-bottom: 15px;
+
+        border-radius: 10px;
+
+        background: #1a1a1a;
+
+        border: 1px solid #333;
+
+        color: #fff;
+
+    }
+
+
+
+    .contact-form input:focus,
+
+    .contact-form textarea:focus {
+
+        outline: none;
+
+        border-color: #ffa500;
+
+    }
+
+
+    .contact-form button {
+
+        width: 100%;
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold" href="#">Deekshitha</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-md-4 text-center">
+        <img src="profile.jpeg" alt="Profile" class="profile-img">
+      </div>
+      <div class="col-md-8">
+        <h5>Hi, I’m</h5>
+        <h1 class="fw-bold text-warning">Deekshitha Sri Jilika</h1>
+        <h5>Aspiring Software Engineer | Web & ML Enthusiast</h5>
+
+        <div class="my-3">
+          <a href="https://www.linkedin.com/in/jilika-deekshitha-sri-954748292/" target="_blank"><i class="bi bi-linkedin fs-4 me-3"></i></a>
+          <a href="https://github.com/Deekshitha1035" target="_blank"><i class="bi bi-github fs-4 me-3"></i></a>
+          <a href="mailto:deekshithasrijilika@gmail.com"><i class="bi bi-envelope fs-4"></i></a>
+        </div>
+
+        <a href="resume.pdf" class="btn btn-main mt-2" download>Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="text-center">
+      I am a Computer Science Engineering student with a strong foundation in
+      web development and machine learning. I enjoy building responsive,
+      user-friendly applications and solving real-world problems using technology.
+      I am eager to learn, grow, and contribute as a software professional.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="row g-4 text-center">
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-filetype-html"></i><p>HTML</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-filetype-css"></i><p>CSS</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-bootstrap"></i><p>Bootstrap</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-filetype-js"></i><p>JavaScript</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-code-slash"></i><p>Python</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-cpu"></i><p>Machine Learning</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-database"></i><p>SQL</p></div></div>
+      <div class="col-md-3 col-6"><div class="skill-box"><i class="bi bi-git"></i><p>Git & GitHub</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h6>B.Tech – Computer Science Engineering</h6>
+        <p>2021 – 2025 | (Your College Name)</p>
+      </div>
+      <div class="timeline-item">
+        <h6>Intermediate (12th)</h6>
+        <p>2020 – 2021 | Board of Intermediate Education</p>
+      </div>
+      <div class="timeline-item">
+        <h6>SSC (10th)</h6>
+        <p>2018 – 2019 | State Board</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#project1">
+          <h5>Fake News Detection System</h5>
+          <p>NLP-based system to classify news as real or fake.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>NLP</span>
+            <span>Machine Learning</span>
+            <span>Pandas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#project2">
+          <h5>Credit Card Fraud Detection</h5>
+          <p>ML model to detect fraudulent financial transactions.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>ML</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="project-card" data-bs-toggle="modal" data-bs-target="#project3">
+          <h5>Portfolio Website</h5>
+          <p>Responsive personal portfolio with modern UI.</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h6>Web Development Intern</h6>
+        <p>
+          Completed internship focusing on responsive web design using Bootstrap.
+          Built portfolio pages, improved UI, and practiced real-world development workflows.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+
+    <form 
+      action="https://formspree.io/f/xeeklldn"
+      method="POST"
+      class="contact-form mx-auto"
+    >
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn-main mt-3">Send Message</button>
+    </form>
+
+    <div class="text-center mt-4">
+      <a href="mailto:deekshithasrij@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/jilika-deekshitha-sri-954748292/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Deekshitha1035" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Deekshitha Sri Jilika | All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
